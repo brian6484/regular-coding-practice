@@ -27,5 +27,7 @@ if value!=0:
     hola.append(str(value))
 
 print(''.join(hola))
+print(hola)
+
 
 

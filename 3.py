@@ -9,6 +9,7 @@ else:
 
 #range explained
 #if len(data) = 5 cuz data is 01100, and len-1 is range(4) which is from 0 to 3 so 0 1 2 3 is 4 iterations, just what we want
+#only when we r checking i+1
 for i in range(len(data)-1):
     if data[i] != data[i+1]:
         if data[i+1] =='1':

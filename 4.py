@@ -4,10 +4,10 @@ data.sort()
 target = 1
 
 for i in data:
-    if target < i:
+    if i>target:
         break
     else:
-        target+=i
+        target += i
 
 print(target)
 

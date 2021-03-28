@@ -1,9 +1,14 @@
-# n , m = map(int,input().split())
-# data = list(map(int,input().split()))
-# count = 0
+n , m = map(int,input().split())
+data = list(map(int,input().split()))
+array = [0]*11
 
-# for i in data:
-#     if i!=data[i+1]:
-#         count+=1
+for x in data:
+    #number of balls for each weight
+    array[x] += 1
 
-# print(count)
+result = 0
+for i in range(1,m+1):
+    n -= array[i]
+    result += array[i] *n
+
+print(result)
