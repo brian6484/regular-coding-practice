@@ -15,6 +15,5 @@ def solution(N,stages):
         length -= count
     
     answer = sorted(answer,key = lambda t: t[1],reverse=True)
-
     answer = [i[0] for i in answer]
     return answer
