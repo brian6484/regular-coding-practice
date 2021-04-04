@@ -1,4 +1,3 @@
-
 n = int(input())
 hola = list(map(int, input().split()))
 hola.sort()
@@ -7,6 +6,7 @@ count = 0
 #number of groups
 group = 0
 
+# WHAT If range(len(hola))? same, both ways are to iterate thru list
 for i in hola:
     count += 1
     if count >= i:
@@ -16,4 +16,7 @@ for i in hola:
 print(group) 
 
 #use list to sort
+
+
+
 
