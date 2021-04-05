@@ -8,7 +8,7 @@ for x in data:
 
 result = 0
 for i in range(1,m+1):
-    n -= array[i]
+    n -= array[i] #n becomes 4, 2, 0 from initial 5
     result += array[i] *n
 
 print(result)
