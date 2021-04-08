@@ -26,7 +26,3 @@ def solution(key,lock):
     
     for rotation in range(4):
 
-# a= [[0,1,1],[1,0,0],[1,0,0],[1,2,3]]
-# n=len(a)
-# m=len(a[0])
-# print(n,m)
