@@ -14,6 +14,7 @@ for _ in range(l):
 
 dx = [0,1,0,-1]
 dy = [1,0,-1,0]
+
 def turn(direction,c):
     if c=='L':
         direction = (direction-1)%4
@@ -31,4 +32,21 @@ def simulate():
     while True:
         nx = x+dx[direction]
         ny = y +dy[direction]
-        if 1<=nx and nx <=
+        if 1<=nx and nx <= n and 1<=ny and ny <= n and data[nx][ny] !=2:
+            # if no apple
+            if data[nx][ny] == 0:
+                data[nx][ny] = 2
+                q.append((nx,ny))
+                px,py = q.pop(0)
+                data[px][py] = 0
+            if data[nx][ny] == 1:
+                data[nx][ny] = 2
+                q.append((nx,ny))
+        else:
+            time+=1
+            if index <1 and time == info[index][0]:
+                direction = turn(direction,info[index][1])
+                index +=1
+    return time
+
+print(simulate)
