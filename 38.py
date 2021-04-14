@@ -8,19 +8,24 @@ for a in range (1,n+1):
         if a ==b:
             graph[a][b] = 0
 for _ in range(m):
-    a,b,c = map(int,input().split())
+    a,b = map(int,input().split())
     #since graph[a][b] is inf, it will satisfy below condition always unless another shouter route(c) appears and updates c
-    if c <graph[a][b]:
-        graph[a][b] = c #update value in 2d list
-    # i dont get below code
+    graph[a][b] =1
+
+    # george floyd
 for k in range(1,n+1):
     for a in range(1,n+1):
         for b in range(1,n+1):
             graph[a][b] = min(graph[a][b], graph[a][k]+graph[k][b])
-for a in range(1,n+1):
-    for b in range(1,n+1):
-        if graph[a][b] ==INF:
-            print(0)
-        else:
-            print(graph[a][b])
-    print()
+
+result = 0
+count =0
+# i dont get this
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if graph[i][j] != INF or graph[j][i] != INF:
+            count +=1
+        if count == n:
+            result +=1
+print(result)
+
