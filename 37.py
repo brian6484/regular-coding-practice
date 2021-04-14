@@ -12,7 +12,7 @@ for _ in range(m):
     #since graph[a][b] is inf, it will satisfy below condition always unless another shouter route(c) appears and updates c
     if c <graph[a][b]:
         graph[a][b] = c #update value in 2d list
-    # i dont get below code
+    # floyd
 for k in range(1,n+1):
     for a in range(1,n+1):
         for b in range(1,n+1):
