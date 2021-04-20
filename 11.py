@@ -29,6 +29,7 @@ def simulate():
     time = 0
     index = 0
     q = [(x,y)]
+    
     while True:
         nx = x+dx[direction]
         ny = y +dy[direction]
